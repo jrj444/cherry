@@ -6,5 +6,10 @@ Vue.component("c-button", Button);
 Vue.component("c-icon", Icon);
 
 new Vue({
-  el: "#app"
+  el: "#app",
+  data: {
+    loading1: false,
+    loading2: true,
+    loading3: false
+  }
 });
