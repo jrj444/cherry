@@ -1,8 +1,6 @@
 <template>
   <button class="c-button" :class="{[`icon-${iconPosition}`]:true}">
-    <svg v-if="icon" class="icon">
-      <use :xlink:href=`#i-${icon}`></use>
-    </svg>
+    <c-icon v-if="icon" :name="icon" class="icon"></c-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -48,14 +46,6 @@
 
     &:focus {
       outline: none;
-    }
-
-    > .icon {
-      width: 1em;
-      height: 1em;
-      vertical-align: -0.15em;
-      fill: currentColor;
-      overflow: hidden;
     }
 
     &.icon-left {
