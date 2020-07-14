@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/jrj444/cherry/issues"
   },
-  "homepage": "https://github.com/jrj444/cherry#readme"
+  "homepage": "https://github.com/jrj444/cherry#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
