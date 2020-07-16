@@ -73,9 +73,10 @@ describe("Input", () => {
       const callback = sinon.fake();
       vm.$on("change", callback);
       let event = new Event("change");
+      Object.defineProperty(event, "target", {value: {value: "test"}, enumerable: true});
       let inputElement = vm.$el.querySelector("input");
       inputElement.dispatchEvent(event);
-      expect(callback).to.have.been.calledWith(event);
+      expect(callback).to.have.been.calledWith("test");
     });
 
     it("input 事件", () => {
@@ -84,9 +85,10 @@ describe("Input", () => {
       const callback = sinon.fake();
       vm.$on("input", callback);
       let event = new Event("input");
+      Object.defineProperty(event, "target", {value: {value: "test"}, enumerable: true});
       let inputElement = vm.$el.querySelector("input");
       inputElement.dispatchEvent(event);
-      expect(callback).to.have.been.calledWith(event);
+      expect(callback).to.have.been.calledWith("test");
     });
 
     it("focus 事件", () => {
@@ -95,9 +97,10 @@ describe("Input", () => {
       const callback = sinon.fake();
       vm.$on("focus", callback);
       let event = new Event("focus");
+      Object.defineProperty(event, "target", {value: {value: "test"}, enumerable: true});
       let inputElement = vm.$el.querySelector("input");
       inputElement.dispatchEvent(event);
-      expect(callback).to.have.been.calledWith(event);
+      expect(callback).to.have.been.calledWith("test");
     });
 
     it("blur 事件", () => {
@@ -106,9 +109,10 @@ describe("Input", () => {
       const callback = sinon.fake();
       vm.$on("blur", callback);
       let event = new Event("blur");
+      Object.defineProperty(event, "target", {value: {value: "test"}, enumerable: true});
       let inputElement = vm.$el.querySelector("input");
       inputElement.dispatchEvent(event);
-      expect(callback).to.have.been.calledWith(event);
+      expect(callback).to.have.been.calledWith("test");
     });
   });
 });
