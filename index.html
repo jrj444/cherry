@@ -31,20 +31,33 @@
     body {
       font-size: var(--font-size);
     }
+
+    .box {
+      margin: 20px;
+    }
   </style>
 </head>
 <body>
 <div id="app">
-  <c-button :loading="loading1" @click="loading1 = !loading1">按钮</c-button>
-  <c-button icon="setting" :loading="loading2" @click="loading2 = !loading2">设置</c-button>
-  <c-button icon="download" icon-position="right" :loading="loading3" @click="loading3 = !loading3">下载</c-button>
-  <c-button-group>
-    <c-button icon="left">上一页</c-button>
-    <c-button>更多</c-button>
-    <c-button icon="right" icon-position="right">下一页</c-button>
-  </c-button-group>
+  <div class="box">
+    <c-input value="你好" disabled></c-input>
+    <c-input value="卧槽" readonly></c-input>
+    <c-input value="淦"></c-input>
+  </div>
+  <div class="box">
+    <c-input value="我带你们打" error="不符合规定"></c-input>
+  </div>
+  <div class="box">
+    <c-button :loading="loading1" @click="loading1 = !loading1">按钮</c-button>
+    <c-button icon="setting" :loading="loading2" @click="loading2 = !loading2">设置</c-button>
+    <c-button icon="download" icon-position="right" :loading="loading3" @click="loading3 = !loading3">下载</c-button>
+    <c-button-group>
+      <c-button icon="left">上一页</c-button>
+      <c-button>更多</c-button>
+      <c-button icon="right" icon-position="right">下一页</c-button>
+    </c-button-group>
+  </div>
 </div>
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_1942772_938upes59is.js"></script>
 </body>
 </html>
