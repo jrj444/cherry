@@ -1,11 +1,11 @@
-import {describe, it} from "mocha";
-
-const expect = chai.expect;
 import Vue from "vue";
 import Button from "../src/Button.vue";
+import {describe, it} from "mocha";
 
 Vue.config.productionTip = false;
 Vue.config.devtools = false;
+
+const expect = chai.expect;
 
 describe("Button", () => {
 
