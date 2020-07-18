@@ -50,7 +50,7 @@
       };
     },
     methods: {
-      createCalsses(obj, srt = "") {
+      createClasses(obj, srt = "") {
         let classes = [];
         if (!obj) {
           return [];
@@ -58,8 +58,8 @@
         if (obj.span) {
           classes.push(`${srt}span-${obj.span}`);
         }
-        if (obj.output) {
-          classes.push(`${srt}span${obj.offset}`);
+        if (obj.offset) {
+          classes.push(`${srt}offset-${obj.offset}`);
         }
         return classes;
       }
@@ -67,13 +67,15 @@
     computed: {
       colClass() {
         let {span, offset, xs, sm, md, lg, xl} = this;
+        let createClasses = this.createClasses;
         return [
-          ...this.createCalsses({span, offset}),
-          ...this.createCalsses(xs, "xs-"),
-          ...this.createCalsses(sm, "sm-"),
-          ...this.createCalsses(md, "md-"),
-          ...this.createCalsses(lg, "lg-"),
-          ...this.createCalsses(xl, "xl-")
+          ...createClasses({span}),
+          ...createClasses({offset}),
+          ...createClasses(xs, "xs-"),
+          ...createClasses(sm, "sm-"),
+          ...createClasses(md, "md-"),
+          ...createClasses(lg, "lg-"),
+          ...createClasses(xl, "xl-")
         ];
       },
       colStyle() {
