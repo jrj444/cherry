@@ -24,52 +24,41 @@
       --border-color-hover: #666;
     }
 
-    #app {
-      margin: 20px;
-    }
-
     body {
       font-size: var(--font-size);
     }
   </style>
   <style>
-    .demo{
-      background: gray;
+    .ch-aside {
+      background: #333;
+      width: 200px;
+    }
+
+    .ch-header {
+      background: #999;
       height: 100px;
-      border: 1px solid red;
+    }
+
+    .ch-footer {
+      background: yellowgreen;
+      height: 75px;
+    }
+
+    .ch-layout {
+
     }
   </style>
 </head>
 <body>
 <div id="app">
-  <c-row>
-    <c-col span="24" :sm="{span:12}" :md="{span:8}">
-      <div class="demo"></div>
-    </c-col>
-    <c-col span="24" :sm="{span:12}" :md="{span:8}">
-      <div class="demo"></div>
-    </c-col>
-    <c-col span="24" :sm="{span:12}" :md="{span:8}">
-      <div class="demo"></div>
-    </c-col>
-    <c-col span="24" :sm="{span:12}" :md="{span:8}">
-      <div class="demo"></div>
-    </c-col>
-    <c-col span="24" :sm="{span:12}" :md="{span:8}">
-      <div class="demo"></div>
-    </c-col>
-    <c-col span="24" :sm="{span:12}" :md="{span:8}">
-      <div class="demo"></div>
-    </c-col>
-  </c-row>
-  <c-row>
-    <c-col span="8">
-      <div class="demo"></div>
-    </c-col>
-    <c-col span="8" offset="8">
-      <div class="demo"></div>
-    </c-col>
-  </c-row>
+  <c-layout style="height: 100vh;">
+    <c-aside>aside</c-aside>
+    <c-layout>
+      <c-header>header</c-header>
+      <c-content>content</c-content>
+      <c-footer>footer</c-footer>
+    </c-layout>
+  </c-layout>
 </div>
 <script src="./src/app.js"></script>
 </body>
