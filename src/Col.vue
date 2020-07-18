@@ -49,16 +49,31 @@
         gutter: 0
       };
     },
+    methods: {
+      createCalsses(obj, srt = "") {
+        let classes = [];
+        if (!obj) {
+          return [];
+        }
+        if (obj.span) {
+          classes.push(`${srt}span-${obj.span}`);
+        }
+        if (obj.output) {
+          classes.push(`${srt}span${obj.offset}`);
+        }
+        return classes;
+      }
+    },
     computed: {
       colClass() {
+        let {span, offset, xs, sm, md, lg, xl} = this;
         return [
-          this.span && `span-${this.span}`,
-          this.offset && `offset-${this.offset}`,
-          this.xs && `xs-span-${this.xs.span}`,
-          this.sm && `sm-span-${this.sm.span}`,
-          this.md && `md-span-${this.md.span}`,
-          this.lg && `lg-span-${this.lg.span}`,
-          this.xl && `xl-span-${this.xl.span}`
+          ...this.createCalsses({span, offset}),
+          ...this.createCalsses(xs, "xs-"),
+          ...this.createCalsses(sm, "sm-"),
+          ...this.createCalsses(md, "md-"),
+          ...this.createCalsses(lg, "lg-"),
+          ...this.createCalsses(xl, "xl-")
         ];
       },
       colStyle() {
