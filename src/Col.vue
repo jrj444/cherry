@@ -5,6 +5,15 @@
 </template>
 
 <script>
+  let validator = (value) => {
+    let valid = true;
+    Object.keys(value).forEach((key) => {
+      if (!["span", ["offset"].includes(key)]) {
+        valid = false;
+      }
+    });
+    return valid;
+  };
   export default {
     name: "Col",
     props: {
@@ -13,6 +22,26 @@
       },
       offset: {
         type: [Number, String]
+      },
+      xs: {
+        type: Object,
+        validator
+      },
+      sm: {
+        type: Object,
+        validator
+      },
+      md: {
+        type: Object,
+        validator
+      },
+      lg: {
+        type: Object,
+        validator
+      },
+      xl: {
+        type: Object,
+        validator
       }
     },
     data() {
@@ -24,7 +53,12 @@
       colClass() {
         return [
           this.span && `span-${this.span}`,
-          this.offset && `offset-${this.offset}`
+          this.offset && `offset-${this.offset}`,
+          this.xs && `xs-span-${this.xs.span}`,
+          this.sm && `sm-span-${this.sm.span}`,
+          this.md && `md-span-${this.md.span}`,
+          this.lg && `lg-span-${this.lg.span}`,
+          this.xl && `xl-span-${this.xl.span}`
         ];
       },
       colStyle() {
@@ -47,6 +81,66 @@
     @for $n from 1 through 24 {
       &.offset-#{$n} {
         margin-left: ($n / 24) * 100%;
+      }
+    }
+    @media (max-width: 575px) {
+      @for $n from 1 through 24 {
+        &.xs-span-#{$n} {
+          width: ($n / 24) * 100%;
+        }
+      }
+      @for $n from 1 through 24 {
+        &.xs-offset-#{$n} {
+          margin-left: ($n / 24) * 100%;
+        }
+      }
+    }
+    @media (min-width: 576px) {
+      @for $n from 1 through 24 {
+        &.sm-span-#{$n} {
+          width: ($n / 24) * 100%;
+        }
+      }
+      @for $n from 1 through 24 {
+        &.sm-offset-#{$n} {
+          margin-left: ($n / 24) * 100%;
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      @for $n from 1 through 24 {
+        &.md-span-#{$n} {
+          width: ($n / 24) * 100%;
+        }
+      }
+      @for $n from 1 through 24 {
+        &.md-offset-#{$n} {
+          margin-left: ($n / 24) * 100%;
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      @for $n from 1 through 24 {
+        &.lg-span-#{$n} {
+          width: ($n / 24) * 100%;
+        }
+      }
+      @for $n from 1 through 24 {
+        &.lg-offset-#{$n} {
+          margin-left: ($n / 24) * 100%;
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      @for $n from 1 through 24 {
+        &.xl-span-#{$n} {
+          width: ($n / 24) * 100%;
+        }
+      }
+      @for $n from 1 through 24 {
+        &.xl-offset-#{$n} {
+          margin-left: ($n / 24) * 100%;
+        }
       }
     }
   }

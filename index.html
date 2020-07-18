@@ -31,49 +31,37 @@
     body {
       font-size: var(--font-size);
     }
-
-    .box {
-      margin: 20px;
+  </style>
+  <style>
+    .demo{
+      background: gray;
+      height: 100px;
+      border: 1px solid red;
     }
   </style>
 </head>
 <body>
 <div id="app">
-  <div style="border: 1px solid black">
-    <c-row gutter="20" align="center">
-      <c-col :span="12">12</c-col>
-      <c-col :span="12">12</c-col>
-    </c-row>
-    <c-row gutter="20">
-      <c-col :span="2">2</c-col>
-      <c-col :span="18" :offset="4">18</c-col>
-    </c-row>
-    <c-row :gutter="20">
-      <c-col :span="2">2</c-col>
-      <c-col :span="10">10</c-col>
-      <c-col :span="12">12</c-col>
-    </c-row>
-
-  </div>
-
-  <div class="box">
-    <c-input value="你好" disabled></c-input>
-    <c-input value="卧槽" readonly></c-input>
-    <c-input value="淦" @change="onChange"></c-input>
-  </div>
-  <div class="box">
-    <c-input value="我带你们打" error="不符合规定"></c-input>
-  </div>
-  <div class="box">
-    <c-button :loading="loading1" @click="loading1 = !loading1">按钮</c-button>
-    <c-button icon="setting" :loading="loading2" @click="loading2 = !loading2">设置</c-button>
-    <c-button icon="download" icon-position="right" :loading="loading3" @click="loading3 = !loading3">下载</c-button>
-    <c-button-group>
-      <c-button icon="left">上一页</c-button>
-      <c-button>更多</c-button>
-      <c-button icon="right" icon-position="right">下一页</c-button>
-    </c-button-group>
-  </div>
+  <c-row>
+    <c-col span="24" :sm="{span:12}" :md="{span:8}">
+      <div class="demo"></div>
+    </c-col>
+    <c-col span="24" :sm="{span:12}" :md="{span:8}">
+      <div class="demo"></div>
+    </c-col>
+    <c-col span="24" :sm="{span:12}" :md="{span:8}">
+      <div class="demo"></div>
+    </c-col>
+    <c-col span="24" :sm="{span:12}" :md="{span:8}">
+      <div class="demo"></div>
+    </c-col>
+    <c-col span="24" :sm="{span:12}" :md="{span:8}">
+      <div class="demo"></div>
+    </c-col>
+    <c-col span="24" :sm="{span:12}" :md="{span:8}">
+      <div class="demo"></div>
+    </c-col>
+  </c-row>
 </div>
 <script src="./src/app.js"></script>
 </body>
