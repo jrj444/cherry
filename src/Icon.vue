@@ -1,5 +1,5 @@
 <template>
-  <svg class="c-icon">
+  <svg class="ch-icon">
     <use :xlink:href=`#i-${name}`></use>
   </svg>
 </template>
@@ -14,7 +14,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .c-icon {
+  .ch-icon {
     width: 1em;
     height: 1em;
     vertical-align: -0.15em;

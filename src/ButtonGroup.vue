@@ -1,5 +1,5 @@
 <template>
-  <div class="c-button-group">
+  <div class="ch-button-group">
     <slot></slot>
   </div>
 </template>
@@ -19,7 +19,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .c-button-group {
+  .ch-button-group {
     display: inline-flex;
     vertical-align: middle;
 

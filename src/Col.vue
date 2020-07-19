@@ -1,5 +1,5 @@
 <template>
-  <div class="col" :class="colClass" :style="colStyle">
+  <div class="ch-col" :class="colClass" :style="colStyle">
     <slot></slot>
   </div>
 </template>
@@ -89,7 +89,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .col {
+  .ch-col {
     @for $n from 1 through 24 {
       &.span-#{$n} {
         width: ($n / 24) * 100%;

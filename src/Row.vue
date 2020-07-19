@@ -1,5 +1,5 @@
 <template>
-  <div class="row" :style="rowStyle" :class="rowClass">
+  <div class="ch-row" :style="rowStyle" :class="rowClass">
     <slot></slot>
   </div>
 </template>
@@ -38,7 +38,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .row {
+  .ch-row {
     display: flex;
     flex-wrap: wrap;
 

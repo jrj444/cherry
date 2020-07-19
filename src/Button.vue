@@ -1,5 +1,5 @@
 <template>
-  <button class="c-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
+  <button class="ch-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
     <c-icon v-if="icon && !loading" :name="icon" class="icon"></c-icon>
     <c-icon class="loading icon" v-if="loading" name="loading"></c-icon>
     <div class="content">
@@ -34,7 +34,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .c-button {
+  .ch-button {
     font: inherit;
     height: var(--button-height);
     padding: 0 .8em;
