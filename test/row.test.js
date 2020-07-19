@@ -12,24 +12,24 @@ describe("Row", () => {
     expect(Row).to.exist;
   });
   it("接收 gutter", (done) => {
-    Vue.component("c-row", Row);
-    Vue.component("c-col", Col);
+    Vue.component("ch-row", Row);
+    Vue.component("ch-col", Col);
     const div = document.createElement("div");
     document.body.appendChild(div);
     div.innerHTML = `
-      <c-row gutter="20">
-        <c-col span="12"></c-col>
-        <c-col span="12"></c-col>
-      </c-row>  
+      <ch-row gutter="20">
+        <ch-col span="12"></ch-col>
+        <ch-col span="12"></ch-col>
+      </ch-row>  
     `;
     const vm = new Vue({
       el: div
     });
     setTimeout(() => {
-      const row = vm.$el.querySelector(".row");
+      const row = vm.$el.querySelector(".ch-row");
       expect(getComputedStyle(row).marginLeft).to.eq("-10px");
       expect(getComputedStyle(row).marginRight).to.eq("-10px");
-      const cols = vm.$el.querySelectorAll(".col");
+      const cols = vm.$el.querySelectorAll(".ch-col");
       expect(getComputedStyle(cols[0]).paddingLeft).to.eq("10px");
       expect(getComputedStyle(cols[1]).paddingRight).to.eq("10px");
       done();
