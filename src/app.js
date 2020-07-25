@@ -10,24 +10,40 @@ import Header from "./Header";
 import Content from "./Content";
 import Aside from "./Aside";
 import Footer from "./Footer";
+import Toast from "./Toast";
+import plugin from "./plugin";
 
-Vue.component("c-button", Button);
-Vue.component("c-icon", Icon);
-Vue.component("c-button-group", ButtonGroup);
-Vue.component("c-input", Input);
-Vue.component("c-row", Row);
-Vue.component("c-col", Col);
-Vue.component("c-layout", Layout)
-Vue.component("c-header", Header)
-Vue.component("c-content", Content)
-Vue.component("c-aside", Aside)
-Vue.component("c-footer", Footer)
+Vue.component("ch-button", Button);
+Vue.component("ch-icon", Icon);
+Vue.component("ch-button-group", ButtonGroup);
+Vue.component("ch-input", Input);
+Vue.component("ch-row", Row);
+Vue.component("ch-col", Col);
+Vue.component("ch-layout", Layout);
+Vue.component("ch-header", Header);
+Vue.component("ch-content", Content);
+Vue.component("ch-aside", Aside);
+Vue.component("ch-footer", Footer);
+Vue.component("ch-toast", Toast);
+Vue.use(plugin);
 
 new Vue({
   el: "#app",
   data: {
     loading1: false,
     loading2: false,
-    loading3: false
+    loading3: false,
+    message: "hi"
+  },
+  created() {
+    this.$toast("这是一个message", {
+      useHTML: false,
+      position: "top"
+    });
+  },
+  methods: {
+    showToast() {
+      this.$toast("我是message");
+    }
   }
 });
