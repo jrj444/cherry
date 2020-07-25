@@ -35,15 +35,12 @@ new Vue({
     loading3: false,
     message: "hi"
   },
-  created() {
-    this.$toast("这是一个message", {
-      useHTML: false,
-      position: "top"
-    });
-  },
   methods: {
     showToast() {
-      this.$toast("我是message");
+      this.$toast("这是一个message", {
+        useHTML: false,
+        position: "middle"
+      });
     }
   }
 });
