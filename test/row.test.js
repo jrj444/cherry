@@ -6,6 +6,8 @@ import Col from "../src/Col";
 Vue.config.productionTip = false;
 Vue.config.devtools = false;
 
+const expect = chai.expect;
+
 describe("Row", () => {
 
   it("存在", () => {
