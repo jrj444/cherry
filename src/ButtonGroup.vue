@@ -11,7 +11,7 @@
       for (let node of this.$el.children) {
         let name = node.nodeName.toLowerCase();
         if (name !== "button") {
-          console.warn(`注意：c-button-group 内的子元素应该全是 c-button，但是你写的是 ${name}，这样会影响组          件的样式，请不要这样使用。`);
+          console.warn(`注意：ch-button-group 内的子元素应该全是 ch-button，但是你写的是 ${name}，这样会影响组件的样式，请不要这样使用。`);
         }
       }
     }
@@ -23,7 +23,7 @@
     display: inline-flex;
     vertical-align: middle;
 
-    > .c-button {
+    > .ch-button {
       border-radius: 0;
 
       &:not(:first-child) {
