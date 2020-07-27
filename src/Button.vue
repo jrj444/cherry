@@ -45,6 +45,7 @@
     align-items: center;
     justify-content: center;
     vertical-align: middle;
+    cursor: pointer;
 
     &:hover {
       border-color: var(--border-color-hover);
