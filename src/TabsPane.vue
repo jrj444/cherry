@@ -29,5 +29,7 @@
 
 <style lang="scss" scoped>
   .ch-tabs-pane {
+    padding: 1em;
+
   }
 </style>

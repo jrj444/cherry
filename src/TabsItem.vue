@@ -1,5 +1,5 @@
 <template>
-  <div class="ch-tabs-item" @click="onClick" :class="tabClasses">
+  <div class="ch-tabs-item" @click="onClick" :class="tabClasses" :data-name="name">
     <slot></slot>
   </div>
 </template>
@@ -26,7 +26,8 @@
     computed: {
       tabClasses() {
         return {
-          active: this.active
+          active: this.active,
+          disabled: this.disabled
         };
       }
     },
@@ -41,6 +42,7 @@
           return;
         }
         this.eventBus && this.eventBus.$emit("update:selected", this.name, this);
+        this.$emit("click", this);
       }
     }
   };
@@ -58,6 +60,11 @@
     &.active {
       color: $blue;
       font-weight: bold;
+    }
+
+    &.disabled {
+      color: #bbb;
+      cursor: not-allowed;
     }
   }
 </style>
