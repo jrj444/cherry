@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper" :class="toastPosition">
     <div class="ch-toast">
-      <slot v-if="!useHTML"></slot>
+      <slot v-if="!useHtml"></slot>
       <div v-else v-html="$slots.default[0]"></div>
       <span v-if="showClose" class="ch-close" @click="onClickClose">
       {{showClose.text}}
@@ -16,7 +16,10 @@
     props: {
       duration: {
         type: Number,
-        default: 3000
+        default: 3000,
+        validator(value) {
+          return value > 0;
+        }
       },
       showClose: {
         type: Object,
@@ -28,7 +31,7 @@
           };
         }
       },
-      useHTML: {
+      useHtml: {
         type: Boolean,
         default: false
       },
@@ -41,7 +44,7 @@
       }
     },
     mounted() {
-      if (this.duration > 0) {
+      if (this.duration) {
         setTimeout(() => {
           this.close();
         }, this.duration);

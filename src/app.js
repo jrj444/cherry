@@ -37,9 +37,10 @@ new Vue({
   },
   methods: {
     showToast() {
-      this.$toast("这是一个message", {
-        useHTML: false,
-        position: "middle"
+      this.$toast("<strong>hi</strong>", {
+        position: "middle",
+        duration: 0,
+        useHtml: true
       });
     }
   }
