@@ -7,12 +7,17 @@
 <script>
   export default {
     name: "TabsBody",
-    inject: ["eventBus"]
+    inject: ["eventBus"],
+    created() {
+      this.eventBus.$on("update:selected", (name) => {
+        this.active = name === this.name;
+      });
+    }
   };
 </script>
 
 <style lang="scss" scoped>
-  .ch-tabs-body{
+  .ch-tabs-body {
 
   }
 </style>

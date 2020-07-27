@@ -1,5 +1,5 @@
 <template>
-  <div class="ch-tabs-item" @click="xxx" :class="tabClasses">
+  <div class="ch-tabs-item" @click="onClick" :class="tabClasses">
     <slot></slot>
   </div>
 </template>
@@ -36,14 +36,18 @@
       });
     },
     methods: {
-      xxx() {
-        this.eventBus.$emit("update:selected", this.name);
+      onClick() {
+        if (this.disabled) {
+          return;
+        }
+        this.eventBus && this.eventBus.$emit("update:selected", this.name, this);
       }
     }
   };
 </script>
 
 <style lang="scss" scoped>
+  $blue: #1890ff;
   .ch-tabs-item {
     padding: 0 1em;
     height: 100%;
@@ -52,7 +56,8 @@
     align-items: center;
 
     &.active {
-      background: red;
+      color: $blue;
+      font-weight: bold;
     }
   }
 </style>
