@@ -30,23 +30,13 @@
   </style>
 </head>
 <body>
-<div id="app">
-  <ch-tabs :selected.sync="selectedTab" selected="football">
-    <ch-tabs-head>
-      <ch-tabs-item name="football">足球</ch-tabs-item>
-      <ch-tabs-item name="basketball" disabled>篮球</ch-tabs-item>
-      <ch-tabs-item name="tennis">网球</ch-tabs-item>
-      <template slot="actions">
-        <ch-button>设置</ch-button>
-      </template>
-    </ch-tabs-head>
-    <ch-tabs-body>
-      <ch-tabs-pane name="football">足球内容</ch-tabs-pane>
-      <ch-tabs-pane name="basketball">篮球内容</ch-tabs-pane>
-      <ch-tabs-pane name="tennis">网球内容</ch-tabs-pane>
-    </ch-tabs-body>
-  </ch-tabs>
-  <ch-button >按钮</ch-button>
+<div id="app" style="padding: 100px;">
+  <ch-popover>
+    <template slot="content">
+      <div>popover内容</div>
+    </template>
+    <ch-button>点击</ch-button>
+  </ch-popover>
 </div>
 <script src="./src/app.js"></script>
 </body>
