@@ -1,9 +1,11 @@
 <template>
   <div class="ch-popover" @click.stop="onClick">
-    <div class="content" v-if="visible" @click.stop>
+    <div class="content" ref="content" v-if="visible" @click.stop>
       <slot name="content"></slot>
     </div>
-    <slot></slot>
+    <span ref="trigger">
+      <slot></slot>
+    </span>
   </div>
 </template>
 
@@ -18,13 +20,19 @@
     methods: {
       onClick() {
         this.visible = !this.visible;
-        this.$nextTick(() => {
-          let eventHandler = () => {
-            this.visible = false;
-            document.removeEventListener("click", eventHandler);
-          };
-          document.addEventListener("click", eventHandler);
-        });
+        if (this.visible === true) {
+          this.$nextTick(() => {
+            document.body.appendChild(this.$refs.content);
+            let {top, left} = this.$refs.trigger.getBoundingClientRect();
+            this.$refs.content.style.left = left + window.scrollX + "px";
+            this.$refs.content.style.top = top + window.scrollY + "px";
+            let eventHandler = () => {
+              this.visible = false;
+              document.removeEventListener("click", eventHandler);
+            };
+            document.addEventListener("click", eventHandler);
+          });
+        }
       }
     }
   };
@@ -35,12 +43,11 @@
     display: inline-block;
     vertical-align: top;
     position: relative;
+  }
 
-    .content {
-      position: absolute;
-      bottom: 100%;
-      left: 0;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-    }
+  .content {
+    position: absolute;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    transform: translateY(-150%);
   }
 </style>
