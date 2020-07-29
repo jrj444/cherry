@@ -30,22 +30,16 @@
       locateContent() {
         const {content, trigger} = this.$refs;
         document.body.appendChild(content);
-        let {top, height, width, left} = trigger.getBoundingClientRect();
-        if (this.position === "top") {
-          content.style.left = left + window.scrollX + "px";
-          content.style.top = top + window.scrollY + "px";
-        } else if (this.position === "bottom") {
-          content.style.left = left + window.scrollX + "px";
-          content.style.top = top + height + window.scrollY + "px";
-        } else if (this.position === "left") {
-          let {height: popHeight} = content.getBoundingClientRect();
-          content.style.left = left + window.scrollX + "px";
-          content.style.top = top + window.scrollY + (height - popHeight) / 2 + "px";
-        } else if (this.position === "right") {
-          let {height: popHeight} = content.getBoundingClientRect();
-          content.style.left = left + window.scrollX + width + "px";
-          content.style.top = top + window.scrollY + (height - popHeight) / 2 + "px";
-        }
+        const {top, height, width, left} = trigger.getBoundingClientRect();
+        const {height: popHeight} = content.getBoundingClientRect();
+        const positions = {
+          top: {top: top + window.scrollY, left: left + window.scrollX},
+          bottom: {top: top + height + window.scrollY, left: left + window.scrollX},
+          left: {top: top + window.scrollY + (height - popHeight) / 2, left: left + window.scrollX},
+          right: {top: top + window.scrollY + (height - popHeight) / 2, left: left + window.scrollX + width}
+        };
+        content.style.top = positions[this.position].top + "px";
+        content.style.left = positions[this.position].left + "px";
       },
       onClickDocument(e) {
         if (this.$refs.popover && (this.$refs.popover === e.target || this.$refs.popover.contains(e.target))) {
