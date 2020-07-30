@@ -31,59 +31,24 @@
 </head>
 <body>
 <div id="app" style="padding: 100px;">
-  <div>
-    <ch-popover>
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <ch-button>上面</ch-button>
-    </ch-popover>
-    <ch-popover position="bottom">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <ch-button>下面</ch-button>
-    </ch-popover>
-    <ch-popover position="left">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <ch-button>左边</ch-button>
-    </ch-popover>
-    <ch-popover position="right">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <ch-button>右边</ch-button>
-    </ch-popover>
-  </div>
-  <div style="margin-top: 50px;">
-    <ch-popover trigger="hover">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <ch-button>上面</ch-button>
-    </ch-popover>
-    <ch-popover position="bottom" trigger="hover">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <ch-button>下面</ch-button>
-    </ch-popover>
-    <ch-popover position="left" trigger="hover">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <ch-button>左边</ch-button>
-    </ch-popover>
-    <ch-popover position="right" trigger="hover">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <ch-button>右边</ch-button>
-    </ch-popover>
-  </div>
-
+  <ch-collapse>
+    <ch-collapse-item title="国服进阶攻略" name="1">
+      <p>1、[开服1星角色评测介绍解说及其培养建议]</p>
+      <p>2、[开服2星角色介绍评测及其建议]</p>
+      <p>3、[开服3星角色介绍解说及其建议]</p>
+      <p>4、[国服最佳输出阵容研究 破甲和输出最优化]</p>
+    </ch-collapse-item>
+    <ch-collapse-item title="抽卡及刷图等规划相关" name="2">
+      <p>1、[水黑池与yly池歪出卡的概率分析]</p>
+      <p>2、[重复造轮子之公主连接国服台服素材规划]</p>
+      <p>3、[借助概率论来分析pcr中的抽卡概率问题]</p>
+    </ch-collapse-item>
+    <ch-collapse-item title="公会战相关" name="3">
+      <p>1、[半年后公会战物理打手输出排行]</p>
+      <p>2、[公主连结角色动作帧数表]</p>
+      <p>3、[简短的会战写轴流程]</p>
+    </ch-collapse-item>
+  </ch-collapse>
 </div>
 <script src="./src/app.js"></script>
 </body>
