@@ -9,90 +9,90 @@
 </template>
 
 <script>
-  import Icon from "./Icon";
+import Icon from "./Icon";
 
-  export default {
-    name: "Button",
-    components: {
-      "ch-icon": Icon
+export default {
+  name: "Button",
+  components: {
+    "ch-icon": Icon
+  },
+  props: {
+    icon: {},
+    loading: {
+      type: Boolean,
+      default: false
     },
-    props: {
-      icon: {},
-      loading: {
-        type: Boolean,
-        default: false
-      },
-      iconPosition: {
-        type: String,
-        default: "left",
-        validator(value) {
-          return value === "left" || value === "right";
-        }
+    iconPosition: {
+      type: String,
+      default: "left",
+      validator(value) {
+        return value === "left" || value === "right";
       }
     }
-  };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-  .ch-button {
-    font: inherit;
-    height: var(--button-height);
-    padding: 0 .8em;
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
-    background: var(--button-bg);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-    cursor: pointer;
+.ch-button {
+  font: inherit;
+  height: 32px;
+  padding: 0 .8em;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
 
-    &:hover {
-      border-color: var(--border-color-hover);
+  &:hover, &:focus {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+  }
+
+  &:active {
+    color: #3a8ee6;
+    border-color: #3a8ee6;
+  }
+
+  &.icon-left {
+    > .icon {
+      order: 1;
+      margin-right: .3em;
     }
 
-    &:active {
-      background: var(--button-active-bg);
-    }
-
-    &:focus {
-      outline: none;
-    }
-
-    &.icon-left {
-      > .icon {
-        order: 1;
-        margin-right: .3em;
-      }
-
-      > .content {
-        order: 2;
-      }
-    }
-
-    &.icon-right {
-      > .icon {
-        order: 2;
-        margin-right: 0;
-        margin-left: .3em;
-      }
-
-      > .content {
-        order: 1;
-      }
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-
-    > .loading {
-      animation: spin 1500ms linear infinite;
+    > .content {
+      order: 2;
     }
   }
+
+  &.icon-right {
+    > .icon {
+      order: 2;
+      margin-right: 0;
+      margin-left: .3em;
+    }
+
+    > .content {
+      order: 1;
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  > .loading {
+    animation: spin 1500ms linear infinite;
+  }
+}
 </style>
