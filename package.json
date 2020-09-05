@@ -1,52 +1,37 @@
 {
   "name": "cherry",
   "version": "0.0.1",
+  "private": true,
   "description": "一个UI组件库",
-  "main": "index.js",
+  "author": {
+    "name": "Jiang Ruijian"
+  },
   "scripts": {
-    "start": "parcel index.html --no-cache",
-    "dev-test": "parcel watch test/* --no-cache && karma start",
-    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jrj444/cherry.git"
-  },
-  "keywords": [
-    "vue",
-    "ui"
-  ],
-  "author": "Jiang Ruijian",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jrj444/cherry/issues"
-  },
-  "homepage": "https://github.com/jrj444/cherry#readme",
   "dependencies": {
-    "chai-spies": "^1.0.0",
-    "vue": "^2.6.11",
-    "vue-hot-reload-api": "^2.3.4"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-unit-mocha": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
     "@vue/component-compiler-utils": "^3.1.2",
+    "@vue/test-utils": "^1.0.3",
     "chai": "^4.2.0",
-    "karma": "^5.1.0",
-    "karma-chai": "^0.1.0",
-    "karma-chai-spies": "^0.1.4",
-    "karma-chrome-launcher": "^3.1.0",
-    "karma-mocha": "^2.0.1",
-    "karma-sinon-chai": "^2.0.2",
-    "mocha": "^8.0.1",
-    "parcel-bundler": "^1.12.4",
     "sass": "^1.26.10",
-    "sinon": "^9.0.2",
-    "sinon-chai": "^3.5.0",
+    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.5.2"
   },
-  "alias": {
-    "vue": "./node_modules/vue/dist/vue.common.js"
-  }
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "license": "MIT"
 }
