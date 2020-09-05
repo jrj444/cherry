@@ -1,6 +1,6 @@
 import Vue from "vue";
 import {describe, it} from "mocha";
-import Toast from "../src/Toast";
+import Toast from "@/components/Toast";
 
 Vue.config.productionTip = false;
 Vue.config.devtools = false;

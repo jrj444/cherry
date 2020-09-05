@@ -1,6 +1,6 @@
 import Vue from "vue";
 import {describe, it} from "mocha";
-import Col from "../src/Col";
+import Col from "@/components/grid/Col";
 
 Vue.config.productionTip = false;
 Vue.config.devtools = false;

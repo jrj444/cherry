@@ -1,10 +1,10 @@
 import Vue from "vue";
 import {describe, it} from "mocha";
-import Tabs from "../src/Tabs";
-import TabsHead from "../src/TabsHead";
-import TabsBody from "../src/TabsBody";
-import TabsItem from "../src/TabsItem";
-import TabsPane from "../src/TabsPane";
+import Tabs from "@/components/tabs/Tabs";
+import TabsHead from "@/components/tabs/TabsHead";
+import TabsBody from "@/components/tabs/TabsBody";
+import TabsItem from "@/components/tabs/TabsItem";
+import TabsPane from "@/components/tabs/TabsPane";
 
 Vue.config.productionTip = false;
 Vue.config.devtools = false;

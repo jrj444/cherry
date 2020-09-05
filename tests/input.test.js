@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Input from "../src/Input.vue";
+import Input from "@/components/Input.vue";
 import {describe, it} from "mocha";
 
 Vue.config.productionTip = false;

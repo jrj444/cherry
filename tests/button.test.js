@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Button from "../src/Button.vue";
+import Button from "@/components/button/Button.vue";
 import {describe, it} from "mocha";
 
 Vue.config.productionTip = false;

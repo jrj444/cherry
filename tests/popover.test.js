@@ -1,6 +1,6 @@
 import Vue from "vue";
 import {describe, it} from "mocha";
-import Popover from "../src/Popover";
+import Popover from "@/components/Popover";
 
 Vue.config.productionTip = false;
 Vue.config.devtools = false;

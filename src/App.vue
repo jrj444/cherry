@@ -1,19 +1,20 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ch-button>按钮</ch-button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Button from "@/components/button/Button";
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    "ch-button": Button
   }
-}
+};
 </script>
 
 <style lang="scss">
