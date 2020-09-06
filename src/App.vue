@@ -12,6 +12,8 @@
     <ch-button type="success">成功</ch-button>
     <ch-button type="warning">警告</ch-button>
     <ch-button type="dangerous">危险</ch-button>
+    <hr>
+    <ch-switch></ch-switch>
   </div>
 </template>
 
@@ -20,6 +22,7 @@
 import Button from "@/components/button/Button";
 import Toast from "@/components/Toast";
 import Input from "@/components/Input";
+import Switch from "@/components/Switch";
 
 export default {
   name: 'App',
@@ -27,6 +30,7 @@ export default {
     "ch-button": Button,
     name: Toast,
     "ch-input": Input,
+    "ch-switch": Switch
   }
 };
 </script>
