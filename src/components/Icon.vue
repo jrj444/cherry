@@ -1,5 +1,5 @@
 <template>
-  <svg class="ch-icon" aria-hidden="true">
+  <svg class="ch-icon" aria-hidden="true" fill="currentColor">
     <use :xlink:href="`#i-${name}`"></use>
   </svg>
 </template>
