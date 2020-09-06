@@ -3,7 +3,6 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <ch-button icon="setting" @click="showToast">按钮</ch-button>
     <ch-input></ch-input>
-    <ch-icon name="error"></ch-icon>
   </div>
 </template>
 

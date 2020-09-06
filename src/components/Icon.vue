@@ -1,13 +1,15 @@
 <template>
   <svg class="ch-icon" aria-hidden="true">
-    <use :xlink:href=`#i-${name}`></use>
+    <use :xlink:href="`#i-${name}`"></use>
   </svg>
 </template>
 
 <script>
+import '@/libs/svg.js';
+
 export default {
-  name: "Icon",
-  props: ["name"],
+  name: 'Icon',
+  props: ['name'],
 };
 </script>
 
