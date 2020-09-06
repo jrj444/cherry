@@ -4,6 +4,14 @@
     <ch-button>默认按钮</ch-button>
     <ch-button type="text">文本按钮</ch-button>
     <ch-button type="link">链接按钮</ch-button>
+    <hr>
+    <ch-button size="large">大按钮</ch-button>
+    <ch-button>正常按钮</ch-button>
+    <ch-button size="small">小按钮</ch-button>
+    <hr>
+    <ch-button type="success">成功</ch-button>
+    <ch-button type="warning">警告</ch-button>
+    <ch-button type="dangerous">危险</ch-button>
   </div>
 </template>
 
