@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <ch-button icon="setting" @click="showToast">按钮</ch-button>
-    <ch-input></ch-input>
+    <ch-button type="primary" icon="setting" icon-position="right">主要按钮</ch-button>
+    <ch-button>默认按钮</ch-button>
+    <ch-button type="text">文本按钮</ch-button>
+    <ch-button type="link">链接按钮</ch-button>
   </div>
 </template>
 
@@ -18,14 +19,6 @@ export default {
     "ch-button": Button,
     name: Toast,
     "ch-input": Input,
-  },
-  methods: {
-    showToast() {
-      this.$toast('这是一个toast', {
-        duration: 5000,
-        position: 'bottom'
-      });
-    }
   }
 };
 </script>
