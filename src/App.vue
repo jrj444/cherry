@@ -13,7 +13,8 @@
     <ch-button type="warning">警告</ch-button>
     <ch-button type="dangerous">危险</ch-button>
     <hr>
-    <ch-switch></ch-switch>
+    <ch-switch v-model="value"></ch-switch>
+    <ch-switch :value="true" disabled></ch-switch>
   </div>
 </template>
 
@@ -22,7 +23,7 @@
 import Button from "@/components/button/Button";
 import Toast from "@/components/Toast";
 import Input from "@/components/Input";
-import Switch from "@/components/Switch";
+import Switch from "@/components/SwitchBtn";
 
 export default {
   name: 'App',
@@ -31,6 +32,11 @@ export default {
     name: Toast,
     "ch-input": Input,
     "ch-switch": Switch
+  },
+  data() {
+    return {
+      value: true
+    };
   }
 };
 </script>

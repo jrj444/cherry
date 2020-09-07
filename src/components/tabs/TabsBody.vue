@@ -7,7 +7,8 @@
 <script>
   export default {
     name: "TabsBody",
-    inject: ["eventBus"],
+    inject: ["eventBus"], eventBus: undefined,
+
     created() {
       this.eventBus.$on("update:selected", (name) => {
         this.active = name === this.name;
