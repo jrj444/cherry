@@ -15,6 +15,18 @@
     <hr>
     <ch-switch v-model="value"></ch-switch>
     <ch-switch :value="true" disabled></ch-switch>
+    <hr>
+    <ch-tabs selected="1" direction="vertical">
+      <ch-tabs-head>
+        <ch-tabs-item name="1">足球</ch-tabs-item>
+        <ch-tabs-item name="2">篮球</ch-tabs-item>
+        <ch-tabs-item name="3">网球</ch-tabs-item>
+      </ch-tabs-head>
+      <ch-tabs-body>
+        <ch-tabs-pane name="1">哈哈哈</ch-tabs-pane>
+        <ch-tabs-pane name="2">篮球</ch-tabs-pane>
+      </ch-tabs-body>
+    </ch-tabs>
   </div>
 </template>
 
@@ -24,6 +36,11 @@ import Button from "@/components/button/Button";
 import Toast from "@/components/Toast";
 import Input from "@/components/Input";
 import Switch from "@/components/SwitchBtn";
+import Tabs from "@/components/tabs/Tabs";
+import TabsBody from "@/components/tabs/TabsBody";
+import TabsHead from "@/components/tabs/TabsHead";
+import TabsItem from "@/components/tabs/TabsItem";
+import TabsPane from "@/components/tabs/TabsPane";
 
 export default {
   name: 'App',
@@ -31,7 +48,12 @@ export default {
     "ch-button": Button,
     name: Toast,
     "ch-input": Input,
-    "ch-switch": Switch
+    "ch-switch": Switch,
+    "ch-tabs": Tabs,
+    "ch-tabs-body": TabsBody,
+    "ch-tabs-head": TabsHead,
+    "ch-tabs-item": TabsItem,
+    "ch-tabs-pane": TabsPane
   },
   data() {
     return {
@@ -42,12 +64,4 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
