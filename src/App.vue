@@ -27,11 +27,26 @@
         <ch-tabs-pane name="2">篮球</ch-tabs-pane>
       </ch-tabs-body>
     </ch-tabs>
+    <hr>
+    <ch-collapse>
+      <ch-collapse-item title="标题1">
+        与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
+        在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
+      </ch-collapse-item>
+      <ch-collapse-item title="标题2">
+        控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；
+        页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。
+      </ch-collapse-item>
+      <ch-collapse-item title="标题3">
+        简化流程：设计简洁直观的操作流程；
+        清晰明确：语言表达清晰且表意明确，让用户快速理解进而作出决策；
+        帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。
+      </ch-collapse-item>
+    </ch-collapse>
   </div>
 </template>
 
 <script>
-
 import Button from "@/components/button/Button";
 import Toast from "@/components/Toast";
 import Input from "@/components/Input";
@@ -41,6 +56,9 @@ import TabsBody from "@/components/tabs/TabsBody";
 import TabsHead from "@/components/tabs/TabsHead";
 import TabsItem from "@/components/tabs/TabsItem";
 import TabsPane from "@/components/tabs/TabsPane";
+import Collapse from "@/components/collapse/Collapse";
+import CollapseItem from "@/components/collapse/CollapseItem";
+
 
 export default {
   name: 'App',
@@ -53,15 +71,21 @@ export default {
     "ch-tabs-body": TabsBody,
     "ch-tabs-head": TabsHead,
     "ch-tabs-item": TabsItem,
-    "ch-tabs-pane": TabsPane
+    "ch-tabs-pane": TabsPane,
+    "ch-collapse": Collapse,
+    "ch-collapse-item": CollapseItem
   },
   data() {
     return {
-      value: true
+      value: true,
+      show: false
     };
   }
 };
 </script>
 
 <style lang="scss">
+*{
+  box-sizing: border-box;
+}
 </style>

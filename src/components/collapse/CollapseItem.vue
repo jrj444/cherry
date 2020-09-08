@@ -1,17 +1,25 @@
 <template>
   <div class="ch-collapse-item">
-    <div class="header" @click="open=!open">
-      {{ title }}
+    <div class="header" @click="show=!show">
+      <div>{{ title }}</div>
+      <ch-icon name="right" class="ch-collapse-item-arrow" :class="{'ch-collapse-item-arrow-showed':show}"></ch-icon>
     </div>
-    <div class="content" ref="content" v-if="open">
-      <slot></slot>
-    </div>
+    <transition name="slide">
+      <div class="content" ref="content" v-if="show">
+        <slot></slot>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
+import Icon from "@/components/Icon";
+
 export default {
   name: "CollapseItem",
+  components: {
+    "ch-icon": Icon
+  },
   props: {
     title: {
       type: String
@@ -19,31 +27,59 @@ export default {
   },
   data() {
     return {
-      open: {
-        type: Boolean,
-        default: false
-      }
+      show: false
     };
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.slide-enter-active {
+  animation: item-show .5s linear;
+}
+
+.slide-leave-active {
+  animation: item-show .5s reverse ease-in;
+}
+
+@keyframes item-show {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 .ch-collapse-item {
   border-bottom: 1px solid #ebeef5;
   cursor: pointer;
+  outline: none;
+  color: #303133;
 
   &:last-child {
     border-bottom: none;
   }
 
-  .header {
+  & .ch-collapse-item-arrow {
+    font-weight: 300;
+    margin-right: 8px;
+    transition: transform .3s;
+
+    &.ch-collapse-item-arrow-showed {
+      transform: rotate(90deg);
+    }
+  }
+
+  > .header {
     height: 48px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
   }
 
-  .content {
+  > .content {
     padding-bottom: 16px;
   }
 }
