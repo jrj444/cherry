@@ -31,6 +31,7 @@ export default {
   border-radius: 11px;
   position: relative;
   outline: none;
+  cursor: pointer;
 
   > span {
     position: absolute;
