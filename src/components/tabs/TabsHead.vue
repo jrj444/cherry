@@ -16,7 +16,7 @@
       this.eventBus.$on("update:selected", (item, vm) => {
         let {width, left} = vm.$el.getBoundingClientRect();
         this.$refs.line.style.width = `${width}px`;
-        this.$refs.line.style.left = `${left}px`;
+        this.$refs.line.style.left = `${left-8}px`;
       });
     }
   };
@@ -37,7 +37,7 @@
       position: absolute;
       bottom: 0;
       border-bottom: 2px solid $blue;
-      transition: all 350ms;
+      transition: all 250ms;
     }
 
     > .actions-wrapper {

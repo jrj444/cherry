@@ -51,7 +51,5 @@
 </script>
 
 <style lang="scss" scoped>
-  .ch-tabs {
 
-  }
 </style>
