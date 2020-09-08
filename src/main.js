@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import "./styles/ch-global.scss"
 import App from './App.vue';
 import plugin from "@/libs/plugin";
 import Icon from "@/components/Icon";
