@@ -28,7 +28,7 @@
       </ch-tabs-body>
     </ch-tabs>
     <hr>
-    <ch-collapse>
+    <ch-collapse single>
       <ch-collapse-item title="标题1">
         与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
         在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
@@ -85,7 +85,7 @@ export default {
 </script>
 
 <style lang="scss">
-*{
+* {
   box-sizing: border-box;
 }
 </style>

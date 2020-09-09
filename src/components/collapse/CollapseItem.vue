@@ -1,6 +1,6 @@
 <template>
   <div class="ch-collapse-item">
-    <div class="header" @click="show=!show">
+    <div class="header" @click="toggle">
       <div>{{ title }}</div>
       <ch-icon name="right" class="ch-collapse-item-arrow" :class="{'ch-collapse-item-arrow-showed':show}"></ch-icon>
     </div>
@@ -13,22 +13,37 @@
 </template>
 
 <script>
-import Icon from "@/components/Icon";
+import {EventBus} from "@/libs/eventbus";
 
 export default {
   name: "CollapseItem",
-  components: {
-    "ch-icon": Icon
-  },
   props: {
     title: {
       type: String
-    }
+    },
+
   },
   data() {
     return {
       show: false
     };
+  },
+  mounted() {
+    EventBus.$on('update:selected', (vm) => {
+      if (vm !== this && this.$parent.single) {
+        this.show = false;
+      }
+    });
+  },
+  methods: {
+    toggle() {
+      if (this.show) {
+        this.show = false;
+      } else {
+        this.show = true;
+        EventBus.$emit('update:selected', this);
+      }
+    }
   }
 };
 </script>
