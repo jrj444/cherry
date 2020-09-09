@@ -35,19 +35,21 @@ export default {
 
 <style lang="scss" scoped>
 .slide-enter-active {
-  animation: item-show .5s linear;
+  animation: item-show .6s linear;
 }
 
 .slide-leave-active {
-  animation: item-show .5s reverse ease-in;
+  animation: item-show .6s reverse ease-out;
 }
 
 @keyframes item-show {
-  0%{
+  0% {
     opacity: 0;
+    transform: scale(0);
   }
-  100%{
+  100% {
     opacity: 1;
+    transform: scale(1);
   }
 }
 

@@ -7,6 +7,12 @@
 <script>
 export default {
   name: "Collapse",
+  props: {
+    single: {
+      type: Boolean,
+      default: false
+    }
+  }
 };
 </script>
 
