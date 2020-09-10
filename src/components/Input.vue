@@ -1,94 +1,80 @@
 <template>
-  <label class="wrapper">
-    <input :value="value" :disabled="disabled" :readonly="readonly" :class="{error}"
+  <label class="ch-input">
+    <input :value="value" :disabled="disabled" :readonly="readonly" :class="{error}" :placeholder="placeholder"
            @change="$emit('change', $event.target.value)"
            @input="$emit('input', $event.target.value)"
            @focus="$emit('focus', $event.target.value)"
            @blur="$emit('blur', $event.target.value)"
     ></input>
-    <template v-if="error">
-      <Icon name="error" class="icon-error"></Icon>
-      <span class="error-message">{{error}}</span>
-    </template>
   </label>
 </template>
 
 <script>
-  import Icon from "./Icon";
+import Icon from "./Icon";
 
-  export default {
-    name: "Input",
-    components: {Icon},
-    props: {
-      value: {
-        type: String
-      },
-      disabled: {
-        type: Boolean,
-        default: false
-      },
-      readonly: {
-        type: Boolean,
-        default: false
-      },
-      error: {
-        type: String
-      }
+export default {
+  name: "Input",
+  components: {Icon},
+  props: {
+    value: {
+      type: String
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
+    placeholder: {
+      type: String
     }
-  };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-  $height: 32px;
-  $border-color: #999;
-  $border-color-hover: #666;
-  $border-radius: 4px;
-  $font-size: 12px;
-  $box-shadow-color: rgba(0, 0, 0, 0.5);
-  $red: #f1453d;
-  .wrapper {
-    display: inline-flex;
-    align-items: center;
+.ch-input {
+  display: inline-flex;
+  align-items: center;
 
-    > input {
-      height: $height;
-      border: 1px solid $border-color;
-      border-radius: $border-radius;
-      padding: 0 8px;
-
-      &:hover {
-        border-color: $border-color-hover;
-      }
-
-      &:focus {
-        outline: none;
-        box-shadow: inset 0 1px 3px $box-shadow-color;
-      }
-
-      &[disabled] {
-        border-color: #bbb;
-        color: #bbb;
-        cursor: not-allowed;
-      }
-
-      &[readonly] {
-        border-color: #ccc;
-        color: #ccc;
-      }
-
-      &.error {
-        border-color: $red;
-      }
-    }
-
-    .icon-error {
-      fill: $red;
-      margin-left: .5em;
-    }
-
-    .error-message {
-      color: $red;
-    }
-
+  & + .ch-input {
+    margin-left: 1em;
   }
+
+  > input {
+    height: 32px;
+    border: 1px solid #d9d9d9;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 0 8px;
+
+    &:hover {
+      border-color: #40a9ff;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #40a9ff;
+      box-shadow: 0 0 0 2px rgba(24, 144, 255, .2);
+    }
+
+    &[disabled] {
+      border-color: #bbb;
+      color: #bbb;
+      cursor: not-allowed;
+    }
+
+    &[readonly] {
+      border-color: #ccc;
+      color: #ccc;
+    }
+
+    &.error {
+      border-color: #f5222d;
+    }
+  }
+}
 </style>

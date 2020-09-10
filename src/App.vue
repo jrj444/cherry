@@ -56,6 +56,10 @@
         下防弹出内容
       </template>
     </ch-popover>
+    <hr>
+    <ch-input placeholder="基本用法"></ch-input>
+    <ch-input disabled placeholder="禁用"></ch-input>
+    <ch-input error="错误信息"></ch-input>
   </div>
 </template>
 
@@ -88,7 +92,7 @@ export default {
     "ch-tabs-pane": TabsPane,
     "ch-collapse": Collapse,
     "ch-collapse-item": CollapseItem,
-    "ch-popover": Popover
+    "ch-popover": Popover,
   },
   data() {
     return {
