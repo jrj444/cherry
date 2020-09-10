@@ -50,11 +50,11 @@ export default {
 
 <style lang="scss" scoped>
 .slide-enter-active {
-  animation: item-show .6s linear;
+  animation: item-show .3s;
 }
 
 .slide-leave-active {
-  animation: item-show .6s reverse ease-out;
+  animation: item-show .3s reverse;
 }
 
 @keyframes item-show {
