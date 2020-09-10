@@ -43,6 +43,19 @@
         帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。
       </ch-collapse-item>
     </ch-collapse>
+    <hr>
+    <ch-popover>
+      <ch-button type="primary">上方弹出</ch-button>
+      <template slot="content">
+        上方弹出内容
+      </template>
+    </ch-popover>
+    <ch-popover position="bottom">
+      <ch-button type="primary">下方弹出</ch-button>
+      <template slot="content">
+        下防弹出内容
+      </template>
+    </ch-popover>
   </div>
 </template>
 
@@ -58,6 +71,7 @@ import TabsItem from "@/components/tabs/TabsItem";
 import TabsPane from "@/components/tabs/TabsPane";
 import Collapse from "@/components/collapse/Collapse";
 import CollapseItem from "@/components/collapse/CollapseItem";
+import Popover from "@/components/Popover";
 
 
 export default {
@@ -73,7 +87,8 @@ export default {
     "ch-tabs-item": TabsItem,
     "ch-tabs-pane": TabsPane,
     "ch-collapse": Collapse,
-    "ch-collapse-item": CollapseItem
+    "ch-collapse-item": CollapseItem,
+    "ch-popover": Popover
   },
   data() {
     return {

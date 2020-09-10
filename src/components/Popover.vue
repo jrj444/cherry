@@ -105,6 +105,10 @@
     vertical-align: top;
     position: relative;
 
+    & + .ch-popover {
+      margin-left: 1em;
+    }
+
     > span {
       display: inline-block;
     }
