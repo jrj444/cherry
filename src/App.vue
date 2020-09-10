@@ -59,7 +59,7 @@
     <hr>
     <ch-input placeholder="基本用法"></ch-input>
     <ch-input disabled placeholder="禁用"></ch-input>
-    <ch-input error="错误信息"></ch-input>
+    <ch-input></ch-input>
   </div>
 </template>
 

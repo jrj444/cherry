@@ -1,6 +1,6 @@
 <template>
   <label class="ch-input">
-    <input :value="value" :disabled="disabled" :readonly="readonly" :class="{error}" :placeholder="placeholder"
+    <input :value="value" :disabled="disabled" :readonly="readonly" :placeholder="placeholder" :type="type"
            @change="$emit('change', $event.target.value)"
            @input="$emit('input', $event.target.value)"
            @focus="$emit('focus', $event.target.value)"
@@ -10,11 +10,8 @@
 </template>
 
 <script>
-import Icon from "./Icon";
-
 export default {
   name: "Input",
-  components: {Icon},
   props: {
     value: {
       type: String
@@ -29,6 +26,10 @@ export default {
     },
     placeholder: {
       type: String
+    },
+    type: {
+      type: String,
+      default: "text"
     }
   }
 };
@@ -38,9 +39,16 @@ export default {
 .ch-input {
   display: inline-flex;
   align-items: center;
+  position: relative;
 
   & + .ch-input {
     margin-left: 1em;
+  }
+
+  > .ch-input-eye {
+    position: absolute;
+    right: -2em;
+    cursor: pointer;
   }
 
   > input {
