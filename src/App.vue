@@ -59,7 +59,7 @@
     <hr>
     <ch-input placeholder="基本用法"></ch-input>
     <ch-input disabled placeholder="禁用"></ch-input>
-    <ch-input></ch-input>
+    <ch-input v-model="message" show-password></ch-input>
   </div>
 </template>
 
@@ -97,7 +97,8 @@ export default {
   data() {
     return {
       value: true,
-      show: false
+      show: false,
+      message: "hi"
     };
   }
 };
