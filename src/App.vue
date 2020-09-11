@@ -60,6 +60,8 @@
     <ch-input placeholder="基本用法"></ch-input>
     <ch-input disabled placeholder="禁用"></ch-input>
     <ch-input v-model="message" show-password></ch-input>
+    <hr>
+    <Icon name="setting"></Icon>
   </div>
 </template>
 
@@ -76,11 +78,13 @@ import TabsPane from "@/components/tabs/TabsPane";
 import Collapse from "@/components/collapse/Collapse";
 import CollapseItem from "@/components/collapse/CollapseItem";
 import Popover from "@/components/Popover";
+import Icon from "@/components/Icon";
 
 
 export default {
   name: 'App',
   components: {
+    Icon,
     "ch-button": Button,
     name: Toast,
     "ch-input": Input,
