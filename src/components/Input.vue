@@ -77,7 +77,6 @@ export default {
     position: absolute;
     right: 0.4em;
     cursor: pointer;
-    transition: all .3s;
   }
 
   .ch-input {
