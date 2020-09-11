@@ -1,8 +1,8 @@
 {
-  "name": "cherry",
+  "name": "cherry-ui-vue",
   "version": "0.0.1",
-  "private": true,
-  "description": "一个UI组件库",
+  "main": "dist/cherry-ui-vue.umd.min.js",
+  "description": "一个Vue UI 组件库",
   "author": {
     "name": "Jiang Ruijian"
   },
