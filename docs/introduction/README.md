@@ -25,10 +25,12 @@ title: 介绍
 
 - 目前写好的组件有 Button、Tabs、Icon、Layout、Grid、Switch、Popover、Input、Toast...
 
+- 最后是现在你看到的文档官网，是使用 VuePress 做的...
+
 ## 作者信息
 
 - Jiang Ruijian
 
 - 联系方式：jrj444@foxmail.com
 
-- 顺便说一下为什么要叫 Cherry，随便起的名字（起名字可太难了）
+- 顺便说一下为什么要叫 Cherry，其实是随便起的名字（起名字可真是太难了）
