@@ -87,18 +87,6 @@ export default {
     pointer-events: none;
     background: #69c0ff;
     border-color: #69c0ff;
-
-    &:before {
-      pointer-events: none;
-      content: "";
-      position: absolute;
-      left: -1px;
-      top: -1px;
-      right: -1px;
-      bottom: -1px;
-      border-radius: inherit;
-      background-color: #69c0ff;
-    }
   }
 
   & + .ch-button {
