@@ -196,6 +196,16 @@ export default {
     &:active {
       background: rgba(0, 0, 0, .1);;
     }
+
+    &.is-disabled {
+      cursor: not-allowed;
+      color: #c0c4cc;
+
+      &:hover, &:focus, &:active {
+        cursor: not-allowed;
+        color: #c0c4cc;
+      }
+    }
   }
 
   &-link {
@@ -206,6 +216,16 @@ export default {
 
     &:focus, &:hover {
       color: #40a9ff;
+    }
+
+    &.is-disabled {
+      cursor: not-allowed;
+      color: #c0c4cc;
+
+      &:hover, &:focus, &:active {
+        cursor: not-allowed;
+        color: #c0c4cc;
+      }
     }
   }
 
