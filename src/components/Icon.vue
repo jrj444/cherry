@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import '@/libs/svg.js';
+import '../libs/svg.js';
 
 export default {
   name: 'Icon',
