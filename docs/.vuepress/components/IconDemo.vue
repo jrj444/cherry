@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="block">
     <div class="icon-demo">
       <ch-icon name="setting"></ch-icon>
       <ch-icon name="share"></ch-icon>
@@ -29,16 +29,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .icon-demo {
   border: 1px solid #eaecef;
   border-radius: 3px;
   padding: 24px;
   display: flex;
   align-items: center;
-
-  &:hover {
-    box-shadow: 0 8px 16px 0 rgba(232, 237, 250,0.6);
-  }
+  transition: all .3s;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 
   > svg {
     width: 24px;

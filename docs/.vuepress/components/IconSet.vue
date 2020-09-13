@@ -135,7 +135,7 @@ export default {
   list-style: none;
   border-radius: 4px;
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 15px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
