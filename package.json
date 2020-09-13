@@ -22,11 +22,12 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/component-compiler-utils": "^3.1.2",
     "@vue/test-utils": "^1.0.3",
+    "@vuepress/plugin-register-components": "^1.5.4",
     "chai": "^4.2.0",
     "sass": "^1.26.10",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11",
-    "vuepress": "^1.5.2"
+    "vuepress": "^1.5.4"
   },
   "browserslist": [
     "> 1%",

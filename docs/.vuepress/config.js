@@ -10,6 +10,7 @@ module.exports = {
       {
         title: '入门',
         collapsable: false,
+        sidebarDepth: 0,
         children: [
           '/introduction/',
           '/getting-started/'
@@ -18,6 +19,7 @@ module.exports = {
       {
         title: '组件',
         collapsable: false,
+        sidebarDepth: 0,
         children: [
           '/components/Icon',
           '/components/Button',
