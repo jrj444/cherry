@@ -98,8 +98,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$border-color: #ebeef5;
-
 .ch-popover {
   display: inline-block;
   vertical-align: top;
@@ -116,7 +114,7 @@ $border-color: #ebeef5;
 
 .content {
   position: absolute;
-  border: 1px solid $border-color;
+  border: 1px solid #ebeef5;
   border-radius: 4px;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
   background: #fff;
@@ -142,7 +140,7 @@ $border-color: #ebeef5;
     }
 
     &::before {
-      border-top-color: $border-color;
+      border-top-color: #ebeef5;
       top: 100%;
     }
 
@@ -160,7 +158,7 @@ $border-color: #ebeef5;
     }
 
     &::before {
-      border-bottom-color: $border-color;
+      border-bottom-color: #ebeef5;
       bottom: 100%;
     }
 
@@ -180,7 +178,7 @@ $border-color: #ebeef5;
     }
 
     &::before {
-      border-left-color: $border-color;
+      border-left-color: #ebeef5;
       left: 100%;
     }
 
@@ -199,7 +197,7 @@ $border-color: #ebeef5;
     }
 
     &::before {
-      border-right-color: $border-color;
+      border-right-color: #ebeef5;
       right: 100%;
     }
 
