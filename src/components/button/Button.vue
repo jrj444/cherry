@@ -3,12 +3,13 @@
       class="ch-button"
       @click="$emit('click')"
       :class="[
-        'ch-icon-'+iconPosition,
-        'ch-button-'+type,
-        'ch-button-'+size,
+        'ch-icon-' + iconPosition,
+        'ch-button-' + type,
+        'ch-button-' + size,
         {
-          'is-circle':circle,
-          'is-disabled':disabled
+          'is-circle': circle,
+          'is-disabled': disabled,
+          'is-loading': loading
         }
       ]"
   >
@@ -80,6 +81,24 @@ export default {
   &.is-circle {
     border-radius: 50%;
     padding: 12px;
+  }
+
+  &.is-loading {
+    pointer-events: none;
+    background: #69c0ff;
+    border-color: #69c0ff;
+
+    &:before {
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      border-radius: inherit;
+      background-color: #69c0ff;
+    }
   }
 
   & + .ch-button {
@@ -200,6 +219,7 @@ export default {
     &.is-disabled {
       cursor: not-allowed;
       color: #c0c4cc;
+      background: #fff;
 
       &:hover, &:focus, &:active {
         cursor: not-allowed;
@@ -210,12 +230,16 @@ export default {
 
   &-link {
     color: #1890ff;
-    background: 0 0;
-    border-color: transparent;
+    background: #fff;
+    border: none;
     box-shadow: none;
 
     &:focus, &:hover {
       color: #40a9ff;
+    }
+
+    &:active {
+      color: #096dd9;
     }
 
     &.is-disabled {
