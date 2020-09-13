@@ -1,6 +1,17 @@
 <template>
-  <button class="ch-button" :class="`ch-icon-${iconPosition} ch-button-${type} ch-button-${size}`"
-          @click="$emit('click')">
+  <button
+      class="ch-button"
+      @click="$emit('click')"
+      :class="[
+        'ch-icon-'+iconPosition,
+        'ch-button-'+type,
+        'ch-button-'+size,
+        {
+          'is-circle':circle,
+          'is-disabled':disabled
+        }
+      ]"
+  >
     <ch-icon v-if="icon && !loading" :name="icon" class="icon"></ch-icon>
     <ch-icon class="loading icon" v-if="loading" name="loading"></ch-icon>
     <span class="content">
@@ -37,6 +48,14 @@ export default {
       validator(value) {
         return value === "left" || value === "right";
       }
+    },
+    circle: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   }
 };
@@ -45,9 +64,10 @@ export default {
 <style lang="scss">
 .ch-button {
   font-size: 14px;
-  height: 32px;
-  padding: 1em 0.8em;
-  border-radius: 0.15em;
+  font-weight: 500;
+  line-height: 1;
+  padding: 12px 14px;
+  border-radius: 3px;
   border: 1px solid #dcdfe6;
   background: #fff;
   display: inline-flex;
@@ -57,6 +77,11 @@ export default {
   cursor: pointer;
   outline: none;
 
+  &.is-circle {
+    border-radius: 50%;
+    padding: 12px;
+  }
+
   & + .ch-button {
     margin-left: 1em;
   }
@@ -64,7 +89,7 @@ export default {
   &.ch-icon-left {
     > .icon {
       order: 1;
-      margin-right: .1em;
+      font-size: 14px;
     }
 
     > .content {
@@ -75,8 +100,7 @@ export default {
   &.ch-icon-right {
     > .icon {
       order: 2;
-      margin-right: 0;
-      margin-left: .1em;
+      font-size: 14px;
     }
 
     > .content {
@@ -109,6 +133,20 @@ export default {
       background: #fff;
       border-color: #096dd9;
     }
+
+    &.is-disabled {
+      cursor: not-allowed;
+      color: #d9d9d9;
+      border-color: #ebeef5;
+      background: #fff;
+
+      &:hover, &:focus, &:active {
+        cursor: not-allowed;
+        color: #d9d9d9;
+        border-color: #ebeef5;
+        background: #fff;
+      }
+    }
   }
 
   &-primary {
@@ -126,6 +164,20 @@ export default {
       color: #fff;
       background: #096dd9;
       border-color: #096dd9;
+    }
+
+    &.is-disabled {
+      cursor: not-allowed;
+      color: #fff;
+      border-color: #91d5ff;
+      background: #91d5ff;
+
+      &:hover, &:focus, &:active {
+        cursor: not-allowed;
+        color: #fff;
+        border-color: #91d5ff;
+        background: #91d5ff;
+      }
     }
   }
 
@@ -173,6 +225,20 @@ export default {
       background: #389e0d;
       border-color: #389e0d;
     }
+
+    &.is-disabled {
+      cursor: not-allowed;
+      color: #fff;
+      border-color: #b7eb8f;
+      background: #b7eb8f;
+
+      &:hover, &:focus, &:active {
+        cursor: not-allowed;
+        color: #fff;
+        border-color: #b7eb8f;
+        background: #b7eb8f;
+      }
+    }
   }
 
   &-warning {
@@ -191,6 +257,20 @@ export default {
       background: #d4b106;
       border-color: #d4b106;
     }
+
+    &.is-disabled {
+      cursor: not-allowed;
+      color: #fff;
+      border-color: #fffb8f;
+      background: #fffb8f;
+
+      &:hover, &:focus, &:active {
+        cursor: not-allowed;
+        color: #fff;
+        border-color: #fffb8f;
+        background: #fffb8f;
+      }
+    }
   }
 
   &-dangerous {
@@ -208,6 +288,20 @@ export default {
       color: #fff;
       background: #cf1322;
       border-color: #cf1322;
+    }
+
+    &.is-disabled {
+      cursor: not-allowed;
+      color: #fff;
+      border-color: #ffa39e;
+      background: #ffa39e;
+
+      &:hover, &:focus, &:active {
+        cursor: not-allowed;
+        color: #fff;
+        border-color: #ffa39e;
+        background: #ffa39e;
+      }
     }
   }
 
