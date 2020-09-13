@@ -64,8 +64,8 @@ export default {
       margin-left: -4px;
     }
   }
-  
-  &.ch-switch-disabled{
+
+  &.ch-switch-disabled {
     cursor: not-allowed;
     opacity: .4;
   }

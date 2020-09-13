@@ -1,67 +1,16 @@
 <template>
   <div id="app">
-    <ch-button type="primary" icon="setting" icon-position="right">主要按钮</ch-button>
-    <ch-button>默认按钮</ch-button>
-    <ch-button type="text">文本按钮</ch-button>
-    <ch-button type="link">链接按钮</ch-button>
+    <ch-button type="primary" icon="user" circle icon-position="right"></ch-button>
+    <ch-button icon="email" type="primary"></ch-button>
+    <ch-button type="primary">信息按钮</ch-button>
+    <ch-button>普通按钮</ch-button>
+    <ch-button icon="search">搜索按钮</ch-button>
     <hr>
-    <ch-button size="large">大按钮</ch-button>
-    <ch-button>正常按钮</ch-button>
-    <ch-button size="small">小按钮</ch-button>
-    <hr>
-    <ch-button type="success">成功</ch-button>
-    <ch-button type="warning">警告</ch-button>
-    <ch-button type="dangerous">危险</ch-button>
-    <hr>
-    <ch-switch v-model="value"></ch-switch>
-    <ch-switch :value="true" disabled></ch-switch>
-    <hr>
-    <ch-tabs selected="1" direction="vertical">
-      <ch-tabs-head>
-        <ch-tabs-item name="1">足球</ch-tabs-item>
-        <ch-tabs-item name="2">篮球</ch-tabs-item>
-        <ch-tabs-item name="3">网球</ch-tabs-item>
-      </ch-tabs-head>
-      <ch-tabs-body>
-        <ch-tabs-pane name="1">哈哈哈</ch-tabs-pane>
-        <ch-tabs-pane name="2">篮球</ch-tabs-pane>
-      </ch-tabs-body>
-    </ch-tabs>
-    <hr>
-    <ch-collapse single>
-      <ch-collapse-item title="标题1">
-        与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
-        在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
-      </ch-collapse-item>
-      <ch-collapse-item title="标题2">
-        控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；
-        页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。
-      </ch-collapse-item>
-      <ch-collapse-item title="标题3">
-        简化流程：设计简洁直观的操作流程；
-        清晰明确：语言表达清晰且表意明确，让用户快速理解进而作出决策；
-        帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。
-      </ch-collapse-item>
-    </ch-collapse>
-    <hr>
-    <ch-popover>
-      <ch-button type="primary">上方弹出</ch-button>
-      <template slot="content">
-        上方弹出内容
-      </template>
-    </ch-popover>
-    <ch-popover position="bottom">
-      <ch-button type="primary">下方弹出</ch-button>
-      <template slot="content">
-        下防弹出内容
-      </template>
-    </ch-popover>
-    <hr>
-    <ch-input placeholder="基本用法"></ch-input>
-    <ch-input disabled placeholder="禁用"></ch-input>
-    <ch-input v-model="message" show-password></ch-input>
-    <hr>
-    <Icon name="setting"></Icon>
+    <ch-button disabled>默认按钮</ch-button>
+    <ch-button disabled type="primary">主要按钮</ch-button>
+    <ch-button disabled type="success">成功按钮</ch-button>
+    <ch-button disabled type="warning">警告按钮</ch-button>
+    <ch-button disabled type="dangerous">危险按钮</ch-button>
   </div>
 </template>
 

@@ -18,7 +18,4 @@
 </script>
 
 <style lang="scss" scoped>
-  .ch-tabs-body {
-
-  }
 </style>

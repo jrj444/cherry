@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Icon from "@/components/Icon";
+import Icon from "../../src/components/Icon";
 
 export default {
   name: "Input",
@@ -64,6 +64,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .ch-input-wrapper {
   display: inline-flex;
   align-items: center;
