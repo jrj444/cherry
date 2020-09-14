@@ -63,15 +63,14 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
 .ch-input-wrapper {
   display: inline-flex;
   align-items: center;
   position: relative;
 
   & + .ch-input-wrapper {
-    margin-left: 1em;
+    margin-left: 48px;
   }
 
   > .ch-input-eye {
@@ -90,6 +89,7 @@ export default {
       border-radius: 4px;
       font-size: 14px;
       padding: 0 24px 0 16px;
+      box-sizing: border-box;
 
       &:hover {
         border-color: #40a9ff;
