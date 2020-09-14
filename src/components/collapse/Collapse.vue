@@ -17,7 +17,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .ch-collapse {
   border-top: 1px solid #ebeef5;
   border-bottom: 1px solid #ebeef5;

@@ -13,15 +13,18 @@
 </template>
 
 <script>
-import {EventBus} from "@/libs/eventbus";
+import {EventBus} from "../../libs/eventbus.js";
+import Icon from "../../components/Icon";
 
 export default {
   name: "CollapseItem",
+  components: {
+    "ch-icon": Icon
+  },
   props: {
     title: {
       type: String
-    },
-
+    }
   },
   data() {
     return {
@@ -48,13 +51,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .slide-enter-active {
-  animation: item-show .3s;
+  animation: item-show .5s;
 }
 
 .slide-leave-active {
-  animation: item-show .3s reverse;
+  animation: item-show .5s reverse;
 }
 
 @keyframes item-show {
@@ -73,6 +76,7 @@ export default {
   cursor: pointer;
   outline: none;
   color: #303133;
+  box-sizing: border-box;
 
   &:last-child {
     border-bottom: none;
@@ -81,7 +85,8 @@ export default {
   & .ch-collapse-item-arrow {
     font-weight: 300;
     margin-right: 8px;
-    transition: transform .3s;
+    transition: transform .5s;
+    fill: #bfbfbf;
 
     &.ch-collapse-item-arrow-showed {
       transform: rotate(90deg);
