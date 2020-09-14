@@ -27,9 +27,9 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .ch-tabs-pane {
     padding: 1em;
-
+    box-sizing: border-box;
   }
 </style>

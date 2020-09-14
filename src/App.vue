@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <ch-button type="primary" icon="user" circle icon-position="right"></ch-button>
-    <ch-button icon="email" type="primary"></ch-button>
-    <ch-button type="primary">信息按钮</ch-button>
-    <ch-button>普通按钮</ch-button>
-    <ch-button icon="search">搜索按钮</ch-button>
-    <hr>
-    <ch-button disabled>默认按钮</ch-button>
-    <ch-button disabled type="primary">主要按钮</ch-button>
-    <ch-button disabled type="success">成功按钮</ch-button>
-    <ch-button disabled type="warning">警告按钮</ch-button>
-    <ch-button disabled type="dangerous">危险按钮</ch-button>
+    <ch-tabs selected="1">
+      <ch-tabs-head>
+        <ch-tabs-item name="1">Tab 1</ch-tabs-item>
+        <ch-tabs-item name="2">Tab 2</ch-tabs-item>
+        <ch-tabs-item name="3">Tab 3</ch-tabs-item>
+      </ch-tabs-head>
+      <ch-tabs-body>
+        <ch-tabs-pane name="1">Content of Tab Pane 1</ch-tabs-pane>
+        <ch-tabs-pane name="2">Content of Tab Pane 2</ch-tabs-pane>
+        <ch-tabs-pane name="3">Content of Tab Pane 3</ch-tabs-pane>
+      </ch-tabs-body>
+    </ch-tabs>
   </div>
 </template>
 
@@ -58,7 +59,4 @@ export default {
 </script>
 
 <style lang="scss">
-* {
-  box-sizing: border-box;
-}
 </style>

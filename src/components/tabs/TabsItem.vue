@@ -48,7 +48,7 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   $blue: #1890ff;
   .ch-tabs-item {
     padding: 0 1em;
@@ -56,6 +56,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
 
     &.active {
       color: $blue;
