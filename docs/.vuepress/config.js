@@ -26,6 +26,7 @@ module.exports = {
           '/components/Layout',
           '/components/Grid',
           '/components/Input',
+          '/components/Collapse',
         ]
       }
     ]
