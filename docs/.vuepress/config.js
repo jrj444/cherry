@@ -24,6 +24,7 @@ module.exports = {
           '/components/Icon',
           '/components/Button',
           '/components/Layout',
+          '/components/Grid',
         ]
       }
     ]
