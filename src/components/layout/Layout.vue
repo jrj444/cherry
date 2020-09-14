@@ -24,7 +24,7 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .ch-layout {
     display: flex;
     flex-direction: column;
