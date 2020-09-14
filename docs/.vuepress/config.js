@@ -25,6 +25,7 @@ module.exports = {
           '/components/Button',
           '/components/Layout',
           '/components/Grid',
+          '/components/Input',
         ]
       }
     ]
