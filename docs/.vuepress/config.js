@@ -28,6 +28,7 @@ module.exports = {
           '/components/Input',
           '/components/Collapse',
           '/components/Tabs',
+          '/components/Popover',
         ]
       }
     ]
