@@ -16,7 +16,9 @@ export default {
   },
   methods: {
     toggle() {
-      this.$emit('input', !this.value);
+      if (!this.disabled) {
+        this.$emit('input', !this.value);
+      }
     }
   }
 };
@@ -68,6 +70,13 @@ export default {
   &.ch-switch-disabled {
     cursor: not-allowed;
     opacity: .4;
+
+    &:active {
+      span {
+        width: 18px;
+        margin-left: 0;
+      }
+    }
   }
 }
 </style>
