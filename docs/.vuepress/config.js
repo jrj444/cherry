@@ -22,15 +22,15 @@ module.exports = {
         sidebarDepth: 0,
         children: [
           '/components/Icon',
-          '/components/Button',
-          '/components/Layout',
           '/components/Grid',
-          '/components/Input',
-          '/components/Collapse',
+          '/components/Layout',
+          '/components/Button',
+          '/components/Switch',
           '/components/Tabs',
-          '/components/Popover',
+          '/components/Input',
           '/components/Toast',
-          '/components/Switch'
+          '/components/Popover',
+          '/components/Collapse'
         ]
       }
     ]
