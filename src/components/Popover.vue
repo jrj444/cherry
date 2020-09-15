@@ -1,7 +1,7 @@
 <template>
   <div class="ch-popover" ref="popover">
-    <div class="content" ref="content" v-if="visible" :class="{[`position-${position}`]:true}">
-      <slot name="content"></slot>
+    <div class="ch-popover-content" ref="content" v-if="visible" :class="{[`ch-popover-position-${position}`]:true}">
+      <slot name="content" :close="close"></slot>
     </div>
     <span ref="trigger">
       <slot></slot>
@@ -33,24 +33,54 @@ export default {
       }
     }
   },
-  mounted() {
-    if (this.trigger === "click") {
-      this.$refs.popover.addEventListener("click", this.onClick);
-    } else {
-      this.$refs.popover.addEventListener("mouseenter", this.open);
-      this.$refs.popover.addEventListener("mouseleave", this.close);
+  computed: {
+    openEvent() {
+      if (this.trigger === 'click') {
+        return 'click';
+      } else {
+        return 'mouseenter';
+      }
+    },
+    closeEvent() {
+      if (this.trigger === 'click') {
+        return 'click';
+      } else {
+        return 'mouseenter';
+      }
     }
+  },
+  mounted() {
+    this.addPopoverListeners();
   },
   destroyed() {
-    if (this.trigger === "click") {
-      this.$refs.popover.removeEventListener("click", this.onClick);
-    } else {
-      this.$refs.popover.removeEventListener("mouseenter", this.open);
-      this.$refs.popover.removeEventListener("mouseleave", this.close);
-    }
+    this.putBackContent();
+    this.removePopoverListeners();
   },
   methods: {
-    locateContent() {
+    addPopoverListeners() {
+      if (this.trigger === 'click') {
+        this.$refs.popover.addEventListener('click', this.onClick);
+      } else {
+        this.$refs.popover.addEventListener('mouseenter', this.open);
+        this.$refs.popover.addEventListener('mouseleave', this.close);
+      }
+    },
+    removePopoverListeners() {
+      if (this.trigger === 'click') {
+        this.$refs.popover.removeEventListener('click', this.onClick);
+      } else {
+        this.$refs.popover.removeEventListener('mouseenter', this.open);
+        this.$refs.popover.removeEventListener('mouseleave', this.close);
+      }
+    },
+    putBackContent() {
+      const {content, popover} = this.$refs;
+      if (!content) {
+        return;
+      }
+      popover.appendChild(content);
+    },
+    positionContent() {
       const {content, trigger} = this.$refs;
       document.body.appendChild(content);
       const {top, height, width, left} = trigger.getBoundingClientRect();
@@ -76,7 +106,7 @@ export default {
     open() {
       this.visible = true;
       this.$nextTick(() => {
-        this.locateContent();
+        this.positionContent();
         document.addEventListener("click", this.onClickDocument);
       });
     },
@@ -97,7 +127,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .ch-popover {
   display: inline-block;
   vertical-align: top;
@@ -112,7 +142,7 @@ export default {
   }
 }
 
-.content {
+.ch-popover-content {
   position: absolute;
   border: 1px solid #ebeef5;
   border-radius: 4px;
@@ -131,7 +161,7 @@ export default {
     position: absolute;
   }
 
-  &.position-top {
+  &.ch-popover-position-top {
     transform: translateY(-100%);
     margin-top: -12px;
 
@@ -150,7 +180,7 @@ export default {
     }
   }
 
-  &.position-bottom {
+  &.ch-popover-position-bottom {
     margin-top: 12px;
 
     &::before, &::after {
@@ -168,7 +198,7 @@ export default {
     }
   }
 
-  &.position-left {
+  &.ch-popover-position-left {
     transform: translateX(-100%);
     margin-left: -12px;
 
@@ -188,7 +218,7 @@ export default {
     }
   }
 
-  &.position-right {
+  &.ch-popover-position-right {
     margin-left: 12px;
 
     &::before, &::after {
