@@ -4,16 +4,18 @@ module.exports = {
   themeConfig: {
     nav: [
       {text: "主页", link: '/'},
+      {text: "文档", link: '/guide/Introduction'},
       {text: "Github", link: "https://github.com/jrj444/cherry"}
     ],
     sidebar: [
       {
-        title: '入门',
+        title: '指南',
         collapsable: false,
         sidebarDepth: 0,
         children: [
-          '/introduction/',
-          '/getting-started/'
+          'guide/Introduction',
+          'guide/Install',
+          'guide/QuickStart'
         ]
       },
       {

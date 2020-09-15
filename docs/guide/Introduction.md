@@ -29,8 +29,10 @@ title: 介绍
 
 ## 作者信息
 
-- Jiang Ruijian
+- 姓名：Jiang Ruijian
 
-- 联系方式：jrj444@foxmail.com
+- 联系邮箱：jrj444@foxmail.com
 
-- 顺便说一下为什么要叫 Cherry，其实是随便起的名字（起名字可真是太难了）
+- 仓库地址：[CherryUI on GitHub](https://github.com/jrj444/cherry)
+
+顺便说一下为什么要叫 Cherry，其实就是随便起的名字（起名字可真是太难了）
