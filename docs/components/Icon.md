@@ -12,8 +12,6 @@ title: Icon 图标
 
 <IconDemo></IconDemo>
 
-### 代码
-
 ```vue
   <ch-icon name="setting"></ch-icon>
   <ch-icon name="share"></ch-icon>
