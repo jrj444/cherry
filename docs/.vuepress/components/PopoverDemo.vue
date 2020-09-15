@@ -50,7 +50,7 @@ export default {
   margin-top: 20px;
 
   .ch-popover {
-    margin: 0 10px 10px 0;
+    margin: 10px;
   }
 }
 </style>
