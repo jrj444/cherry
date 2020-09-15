@@ -10,7 +10,7 @@ title: Icon 图标
 
 通过组件的 ```name``` 属性来使用即可。例如：
 
-<IconDemo></IconDemo>
+<ClientOnly><IconDemo></IconDemo></ClientOnly>
 
 ```vue
   <ch-icon name="setting"></ch-icon>
@@ -21,4 +21,4 @@ title: Icon 图标
 
 ### 图标集合
 
-<IconSet></IconSet>
+<ClientOnly><IconSet></IconSet></ClientOnly>

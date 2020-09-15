@@ -8,7 +8,7 @@ title: Switch 开关
 
 ### 基础用法
 
-<SwitchDemo></SwitchDemo>
+<ClientOnly><SwitchDemo></SwitchDemo></ClientOnly>
 
 绑定 `v-model` 到一个 `Boolean` 类型的变量
 
@@ -28,7 +28,7 @@ export default {
 
 ### 禁用状态
 
-<SwitchDisabled></SwitchDisabled>
+<ClientOnly><SwitchDisabled></SwitchDisabled></ClientOnly>
 
 设置 `disabled` 属性为 `true`即可禁用
 

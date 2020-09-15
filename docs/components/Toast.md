@@ -10,7 +10,7 @@ title: Toast 消息提示
 
 从顶部、中间或者底部出现，3 秒后会自动消失
 
-<ToastDemo></ToastDemo>
+<ClientOnly><ToastDemo></ToastDemo></ClientOnly>
 
 我在 Vue.prototype 上注册了 `$toast` 用于调用。它接收两个参数，分别是 `message` 消息内容 和 `toastOptions` 字面量参数
 
@@ -51,7 +51,7 @@ export default {
 
 Toast 默认自带关闭的文本按钮，这里你可以自定义关闭按钮的文本
 
-<ToastCloseButton></ToastCloseButton>
+<ClientOnly><ToastCloseButton></ToastCloseButton></ClientOnly>
 
 使用 `showClose` 来定义关闭按钮，关闭按钮还可以添加一个回调函数
 
@@ -80,7 +80,7 @@ export default {
 
 `message` 支持传入 HTML 片段
 
-<ToastUseHtml></ToastUseHtml>
+<ClientOnly><ToastUseHtml></ToastUseHtml></ClientOnly>
 
 将 `useHtml` 设置为 true，`message` 就会被当作 HTML 来处理
 

@@ -10,7 +10,7 @@ title: Collapse 折叠面板
 
 可同时展开多个面板，面板之间互不影响
 
-<CollapseDemo></CollapseDemo>
+<ClientOnly><CollapseDemo></CollapseDemo></ClientOnly>
 
 通过 `title` 来设置每个面板的标题
 
@@ -39,7 +39,7 @@ title: Collapse 折叠面板
 
 每次只能展开一个面板
 
-<CollapseSingle></CollapseSingle>
+<ClientOnly><CollapseSingle></CollapseSingle></ClientOnly>
 
 通过 `single` 属性来设置是否以手风琴模式显示
 

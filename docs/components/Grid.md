@@ -16,7 +16,7 @@ title: Grid 栅格
 
 使用单一分栏创建基础的栅格布局
 
-<GridDemo></GridDemo>
+<ClientOnly><GridDemo></GridDemo></ClientOnly>
 
 通过 Row 和 Col 组件，并通过 Col 组件的 `span` 属性可以自由地组合布局
 
@@ -61,7 +61,7 @@ title: Grid 栅格
 
 各分栏之间可以存在间隔
 
-<GridGutterDemo></GridGutterDemo>
+<ClientOnly><GridGutterDemo></GridGutterDemo></ClientOnly>
 
 Row 提供 `gutter` 属性来指定每一栏之间的间隔，默认间隔为 0。
 
@@ -83,7 +83,7 @@ Row 提供 `gutter` 属性来指定每一栏之间的间隔，默认间隔为 0�
 
 可以指定偏移的栏数
 
-<GridOffsetDemo></GridOffsetDemo>
+<ClientOnly><GridOffsetDemo></GridOffsetDemo></ClientOnly>
 
 通过制定 Col 组件的 `offset` 属性可以指定分栏偏移的栏数。
 
@@ -105,7 +105,7 @@ Row 提供 `gutter` 属性来指定每一栏之间的间隔，默认间隔为 0�
 
 预设了五个响应式尺寸：`xs`、`sm`、`md`、`lg` 和 `xl`
 
-<GridResponsiveDemo></GridResponsiveDemo>
+<ClientOnly><GridResponsiveDemo></GridResponsiveDemo></ClientOnly>
 
 `xs`、`sm`、`md`、`lg` 和 `xl` 接收一个对象为参数，如：`{span: 4, offset: 4}`
 

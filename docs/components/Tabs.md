@@ -31,7 +31,7 @@ Tabs 组件提供了选项卡功能，给 `<ch-tab-item>` 和 `<ch-tab-pane>` �
 
 ### 禁用选项和自定义标签页
 
-<TabsExtra></TabsExtra>
+<ClientOnly><TabsExtra></TabsExtra></ClientOnly>
 
 使用 `disable` 定义禁用的选项，用具名的 `slot="actions"` 来自定义顶栏右部的内容 
 

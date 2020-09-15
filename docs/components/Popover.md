@@ -8,7 +8,7 @@ title: Popover 弹出框
 
 ### 使用方法
 
-<PopoverDemo></PopoverDemo>
+<ClientOnly><PopoverDemo></PopoverDemo></ClientOnly>
 
 `trigger` 选择弹出方式为 click 或者 hover，`positon` 选择弹出框的方向位置
 

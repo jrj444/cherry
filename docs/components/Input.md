@@ -8,7 +8,7 @@ title: Input 输入框
 
 ### 基础用法
 
-<InputDemo></InputDemo>
+<ClientOnly><InputDemo></InputDemo></ClientOnly>
 
 通过 `vlaue` 指定输入框内容，`disabled` 指定是否禁用，`readonly` 指定为只读状态
 
@@ -22,7 +22,7 @@ title: Input 输入框
 
 数据支持双向绑定
 
-<InputDoubleSidedDemo></InputDoubleSidedDemo>
+<ClientOnly><InputDoubleSidedDemo></InputDoubleSidedDemo></ClientOnly>
 
 ```jsx
 <ch-input v-model="input"></ch-input>
@@ -41,7 +41,7 @@ export default {
 
 ### 密码框
 
-<InputPassword></InputPassword>
+<ClientOnly><InputPassword></InputPassword></ClientOnly>
 
 使用 `show-password` 属性，会得到一个可切换显示隐藏的密码框
 

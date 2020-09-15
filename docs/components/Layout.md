@@ -22,7 +22,7 @@ title: Layout 布局
 
 ### 使用方法
 
-<LayoutDemo></LayoutDemo>
+<ClientOnly><LayoutDemo></LayoutDemo></ClientOnly>
 
 灵活运用 `<ch-layout>` 嵌套的方法，放置各个容器组件的位置
 

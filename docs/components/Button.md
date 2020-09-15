@@ -10,7 +10,7 @@ title: Button 按钮
 
 基础的按钮用法
 
-<ButtonBasicDemo></ButtonBasicDemo>
+<ClientOnly><ButtonBasicDemo></ButtonBasicDemo></ClientOnly>
 
 使用 `type`、`circle` 来定义 Button 的样式
 
@@ -32,7 +32,7 @@ title: Button 按钮
 
 按钮为不可用的状态
 
-<ButtonDisableDemo></ButtonDisableDemo>
+<ClientOnly><ButtonDisableDemo></ButtonDisableDemo></ClientOnly>
 
 使用 `disabled` 属性来定义按钮是否可用，它接受一个 `Boolean` 值。
 
@@ -48,7 +48,7 @@ title: Button 按钮
 
 没有边框和背景色的按钮，有 `text` 和 `link` 两种形式
 
-<ButtonTextDemo></ButtonTextDemo>
+<ClientOnly><ButtonTextDemo></ButtonTextDemo></ClientOnly>
 
 同样，使用 `type` 来定义这两种样式的按钮
 
@@ -63,7 +63,7 @@ title: Button 按钮
 
 按钮可以附带图标，或者使用只有图标的按钮
 
-<ButtonIconDemo></ButtonIconDemo>
+<ClientOnly><ButtonIconDemo></ButtonIconDemo></ClientOnly>
 
 使用 `icon` 属性即可，还可以用 `icon-positon` 来设置图标的左右位置
 
@@ -82,7 +82,7 @@ title: Button 按钮
 
 以按钮组的方式出现，用于需要多个按钮组合的情况
 
-<ButtonGroupDemo></ButtonGroupDemo>
+<ClientOnly><ButtonGroupDemo></ButtonGroupDemo></ClientOnly>
 
 使用 `<ch-button-group>` 标签来嵌套里面的 `<ch-button>`
 
