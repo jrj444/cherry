@@ -1,9 +1,9 @@
 <template>
-  <div class="wrapper" :class="toastPosition">
+  <div class="ch-toast-wrapper" :class="toastPosition">
     <div class="ch-toast">
       <slot v-if="!useHtml"></slot>
       <div v-else v-html="$slots.default[0]"></div>
-      <span v-if="showClose" class="ch-close" @click="onClickClose">
+      <span v-if="showClose" class="ch-toast-close" @click="onClickClose">
       {{ showClose.text }}
     </span>
     </div>
@@ -52,7 +52,7 @@ export default {
   },
   computed: {
     toastPosition() {
-      return {[`position-${this.position}`]: true};
+      return {[`ch-toast-position-${this.position}`]: true};
     }
   },
   methods: {
@@ -71,7 +71,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $font-size: 14px;
 $toast-height: 40px;
 $toast-bg: rgba(0, 0, 0, 0.75);
@@ -106,12 +106,13 @@ $toast-bg: rgba(0, 0, 0, 0.75);
   }
 }
 
-.wrapper {
+.ch-toast-wrapper {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 30;
 
-  &.position-top {
+  &.ch-toast-position-top {
     top: 0;
 
     .ch-toast {
@@ -121,7 +122,7 @@ $toast-bg: rgba(0, 0, 0, 0.75);
     }
   }
 
-  &.position-middle {
+  &.ch-toast-position-middle {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
 
@@ -130,7 +131,7 @@ $toast-bg: rgba(0, 0, 0, 0.75);
     }
   }
 
-  &.position-bottom {
+  &.ch-toast-position-bottom {
     bottom: 0;
 
     .ch-toast {
@@ -155,7 +156,7 @@ $toast-bg: rgba(0, 0, 0, 0.75);
   padding: 8px 16px;
 }
 
-.ch-close {
+.ch-toast-close {
   padding-left: 16px;
   font-size: 10px;
   flex-shrink: 0;
