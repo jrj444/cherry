@@ -1,6 +1,6 @@
 {
   "name": "@jrj444/cherry-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/cherry.umd.min.js",
   "description": "一个Vue UI 组件库",
   "author": {
@@ -11,6 +11,7 @@
     "vue",
     "ui"
   ],
+  "homepage": "https://jrj444.github.io/cherry/",
   "repository": {
     "type": "git",
     "url": "https://github.com/jrj444/cherry"
