@@ -1,15 +1,10 @@
 <p align="center">
-
-[![image](public/cherry.png)](https://jrj444.github.io/cherry/)
-
+<a href="https://jrj444.github.io/cherry/"><img src="public/cherry.png"></a>
 </p>
-
 <p align="center">
-
-![NPM](https://img.shields.io/npm/l/@jrj444/cherry-ui)
-![npm](https://img.shields.io/npm/v/@jrj444/cherry-ui)
-![GitHub top language](https://img.shields.io/github/languages/top/jrj444/cherry)
-
+<img alt="NPM" src="https://img.shields.io/npm/l/@jrj444/cherry-ui">
+<img alt="npm" src="https://img.shields.io/npm/v/@jrj444/cherry-ui">
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/jrj444/cherry">
 </p>
 
 ### 介绍
