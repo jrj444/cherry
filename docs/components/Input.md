@@ -1,5 +1,5 @@
 ---
-title: Input 输入框
+title: Input - 输入框
 ---
 
 # Input 输入框

@@ -1,5 +1,5 @@
 ---
-title: Switch 开关
+title: Switch - 开关
 ---
 
 # Switch 开关
